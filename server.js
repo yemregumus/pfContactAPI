@@ -11,6 +11,10 @@ app.use(cors());
 // Middleware to parse incoming JSON data
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send("Server is live!");
+});
+
 // Handle form submissions
 app.post("/send-email", async (req, res) => {
   try {
